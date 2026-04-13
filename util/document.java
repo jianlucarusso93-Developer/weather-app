@@ -1,32 +1,30 @@
 /**
- * This program is a simple weather application that uses online APIs.
+ * Weather application that retrieves real-time weather data
+ * using the Open-Meteo API.
  *
- * How it works:
- * 1. The user enters the name of a city (in any language).
- * 2. The program sends a request to a geocoding API to find matching cities.
- * 3. If multiple cities are found, the user can choose one from a list.
- * 4. The program retrieves the latitude and longitude of the selected city.
- * 5. It then sends another request to a weather API to get current weather data.
- * 6. Finally, it displays:
- *    - City name
- *    - Region (if available)
- *    - Country
- *    - Current temperature
- *    - Weather condition (e.g., clear sky, rain, etc.)
+ * <p>
+ * HOW IT WORKS:
+ * 1. The program asks the user to enter a city name via console (Scanner).
+ * 2. It sends a request to the Open-Meteo Geocoding API to find matching cities.
+ * 3. If multiple cities are found, the user selects one by index.
+ * 4. The selected city's latitude and longitude are extracted.
+ * 5. A second API request is sent to Open-Meteo Forecast API.
+ * 6. The program retrieves current temperature and weather condition.
+ * 7. A weather code is converted into a human-readable description.
+ * 8. The final result is printed in the console.
+ * </p>
  *
- * Features:
- * - Handles multiple city results
- * - Supports cities with spaces (e.g., "New York")
- * - Includes basic error handling (invalid input, city not found, network issues)
- * - Uses JSON parsing with Gson
+ * FEATURES:
+ * - Supports multiple city results selection
+ * - Automatic retry mechanism for API requests
+ * - Handles network errors and invalid inputs
+ * - Converts weather codes into readable descriptions
  *
- * This project is designed for beginners to learn:
- * - How to call REST APIs in Java
- * - How to handle JSON data
- * - Basic error handling
- * - User input management
+ * EXTERNAL API USED:
+ * - https://geocoding-api.open-meteo.com
+ * - https://api.open-meteo.com
  *
- * Requirements:
- * - Internet connection
- * - Gson library included in the project
+ * NOTE:
+ * This version is console-based and uses Scanner for input.
+ * It can be adapted to a web application using Spring Boot or JavaScript.
  */
