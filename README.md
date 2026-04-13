@@ -12,3 +12,6 @@ Clone this repository: https://github.com/jianlucarusso93-Developer/weather-app
 
 Navigate to the project folder:
 java -cp ".:lib/gson-2.10.1.jar" util.finalGetWeather
+
+
+To run the application, download the project and click on the HTML file.
